@@ -1,6 +1,6 @@
 import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
-import BrocoForm from './BrocoForm';
+import BrocoInviteForm from './BrocoInviteForm';
 
 class BrocoModal extends React.Component{
 
@@ -20,7 +20,7 @@ class BrocoModal extends React.Component{
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <BrocoForm />
+          <BrocoInviteForm />
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={this.props.onHide}>Close</Button>
