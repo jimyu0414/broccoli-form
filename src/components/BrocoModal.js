@@ -3,12 +3,20 @@ import { Modal, Button } from 'react-bootstrap';
 import BrocoInviteForm from './BrocoInviteForm';
 
 class BrocoModal extends React.Component{
-
+  state={
+    closeModal: true,
+  }
+  closeModal = () =>{
+   this.setState(
+      {showModal: false}
+    )
+  }
     render(){
        return(
         <Modal
         className="broco-modal"
         show={this.props.show}
+        
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
@@ -20,7 +28,7 @@ class BrocoModal extends React.Component{
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <BrocoInviteForm />
+          <BrocoInviteForm closeModal={this.props.onHide}/>
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={this.props.onHide}>Close</Button>

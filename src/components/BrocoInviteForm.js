@@ -12,26 +12,36 @@ class BrocoForm extends React.Component{
     }
 
     onFormSubmit = (evt) =>{
-        evt.preventDefault();
-        const fields = this.state.fields;
-        const fieldErrors = this.validate(fields);
-        if (Object.keys(fieldErrors).length) return;
+         evt.preventDefault();
+         const fields = this.state.fields;
+         const fieldErrors = this.validate(fields);
+         if (Object.keys(fieldErrors).length) return;
         
-        let email = {
-            name: fields.name,
-            email: fields.email
+         let email = {
+             name: fields.name,
+             email: fields.email
         }
 
-        const res =  fetch('https://l94wc2001h.execute-api.ap-southeast-2.amazonaws.com/prod/fake-auth', {
+         const res =  fetch('https://l94wc2001h.execute-api.ap-southeast-2.amazonaws.com/prod/fake-auth', {
             method: 'POST',
-            headers: {
-              'Accept': 'application/json',
+             headers: {
+               'Accept': 'application/json',
               'Content-Type': 'application/json',
-            },
+         }, 
             body: JSON.stringify(email)
-          });
+        });
         
-          console.log(res);     
+        // handle callback
+          res.then(function(result) {
+            if(result.status === 200){
+                alert('Yes! you are in our invite list');
+            }else{
+                alert('Opps it returns 400 Bad request');
+            }
+            
+          },);
+
+        this.props.closeModal()
     }
 
     validate = (fields) =>{
@@ -51,7 +61,7 @@ class BrocoForm extends React.Component{
         })
         return errors;
     }
-    
+
     onInputChange = (evt) =>{
         const fields = this.state.fields;
         fields[evt.target.name] = evt.target.value;
