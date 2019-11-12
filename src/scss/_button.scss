@@ -1,0 +1,48 @@
+.button{
+    padding: 1rem;
+    font-size: 1rem;
+    color: #000;
+    background: #fff;
+    letter-spacing: .125rem;
+    cursor: pointer;
+    &__simple{
+        border: 1px solid #000;
+        &:hover{
+            background: #fff;
+            border-color: #000;
+            color: #000;
+        }
+        &:focus{
+            box-shadow: none;
+        }
+        &:active{
+            background-color: #aaa !important;
+            border-color: none !important;
+            box-shadow: none !important;
+        }
+    }
+}
+
+//changes of bootstrap default style
+.btn{
+    padding: 1rem;
+    font-size: 1rem;
+    color: #000;
+    letter-spacing: .125rem;
+    background: #fff;
+    border-radius: 0;
+    border-color: #000;
+    &:active{
+        background-color: #aaa !important;
+        border-color: none !important;
+        box-shadow: none !important;
+    }
+    &:hover{
+        background: #fff;
+        border-color: #000;
+        color: #000;
+    }
+    &:focus{
+        box-shadow: none;
+    }
+}
