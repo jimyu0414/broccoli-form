@@ -1,5 +1,27 @@
-//changes of bootstrap default style
 .modal-content{
     border-radius: 0;
     border: none;
+}
+.modal-header{
+    border-bottom: none;
+    justify-content: center;
+    margin-top: 1.5rem;
+    .modal-title{
+        &:after{
+            content: "";
+            border-bottom: 1px solid gray;
+            display: block;
+            width: 3rem;
+            margin: auto;
+            margin-top: 1rem;
+            margin-bottom: -1rem;
+        }
+    }
+}
+
+.modal-body{
+    padding-bottom: 3rem;
+    .button__modal-submit{
+        margin-top:1rem;
+    }
 }

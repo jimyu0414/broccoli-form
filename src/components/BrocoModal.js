@@ -1,12 +1,13 @@
 import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
-import BrocoForm from '../components/BrocoForm';
+import BrocoForm from './BrocoForm';
 
 class BrocoModal extends React.Component{
 
     render(){
        return(
         <Modal
+        className="broco-modal"
         show={this.props.show}
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
@@ -19,7 +20,7 @@ class BrocoModal extends React.Component{
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-         
+          <BrocoForm />
         </Modal.Body>
         <Modal.Footer>
           <Button onClick={this.props.onHide}>Close</Button>

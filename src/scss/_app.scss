@@ -33,6 +33,8 @@
             text-align: center;
             font-weight: 300;
             margin-bottom: 0;
+            font-size: 2rem;
+            margin-bottom: 1rem;
             @include breakpoint(m){
                 font-size: 2.5rem;
                 letter-spacing: .875rem;
@@ -51,6 +53,7 @@
             height: 100%;
             margin-top: 10%;
             margin-bottom: 10%;
+
         }
     }
   }
