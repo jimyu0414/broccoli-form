@@ -34,7 +34,7 @@ class BrocoForm extends React.Component{
         // handle callback
           res.then(function(result) {
             if(result.status === 200){
-                alert('Yes! you are now in our invite list');
+                alert('Yes! you are now in our invite list.');
             }else{
                 alert('Opps it returns 400 Bad request, mind to try again?');
             }
