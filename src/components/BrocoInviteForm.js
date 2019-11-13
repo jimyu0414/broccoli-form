@@ -34,9 +34,9 @@ class BrocoForm extends React.Component{
         // handle callback
           res.then(function(result) {
             if(result.status === 200){
-                alert('Yes! you are in our invite list');
+                alert('Yes! you are now in our invite list');
             }else{
-                alert('Opps it returns 400 Bad request');
+                alert('Opps it returns 400 Bad request, mind to try again?');
             }
             
           },);
@@ -49,7 +49,7 @@ class BrocoForm extends React.Component{
         let name = fields.name.trim();
         let email = fields.email;
         let confirmEmail = fields.confirmEmail;
-        console.log(name + email + confirmEmail)
+        //console.log(name + email + confirmEmail)
         if(name.length < 3){
             errors.name = "Name should contain at least 3 characters";
         }
