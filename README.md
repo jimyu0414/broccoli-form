@@ -1,6 +1,6 @@
 This Simple App was developed with [Create React App]
 
-This App is about implementing react-bootstrap 'Form' and 'Modal' to create an popup with form for user to sumbit and then fetching to external api and handle response with simple alerts.
+This App is about implementing and customising react-bootstrap 'Form' and 'Modal' to create an popup with form for user to sumbit and then fetching to external api and handle response with simple alerts.
 
 DEMO link is attached: [DEMO](https://broccoli-invite-form.herokuapp.com/).
 
